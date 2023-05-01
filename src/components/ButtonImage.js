@@ -26,7 +26,6 @@ const styles = StyleSheet.create({
     },
     card:{
         width: '50%',
-        height: '50%',
-        backgroundColor: 'white',
+        height: '50%'
     }
 })

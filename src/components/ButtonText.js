@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 
-export default function ButtonText({text, onPress}){
+export default function ButtonText({cWidth, cHeight, text}){
   return (
-    <TouchableOpacity style={styles.cardOpacity} activeOpacity={0.55}  onPress={onPress}>
+    <TouchableOpacity style={[styles.cardOpacity, {width: cWidth, height: cHeight}]} activeOpacity={0.55}>
         <View style={styles.card}>
             <Text style={styles.smallBoldText}>{text} </Text>
         </View>
@@ -13,8 +13,6 @@ export default function ButtonText({text, onPress}){
 
 const styles = StyleSheet.create({
     cardOpacity:{
-        width: '87.5%',
-        height: 144,
         backgroundColor: 'white',
         marginVertical: 12,
         borderRadius: 24,
@@ -29,15 +27,14 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         borderRadius: 24,
         borderWidth: 1,
         borderColor: '#4789E9',
     },
     smallBoldText:{
-        marginVertical: 4,
         fontWeight: 'bold',
-        fontSize: 14,
+        fontSize: 16,
         textAlign: 'left',
         color: 'black'
     }
